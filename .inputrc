@@ -1,0 +1,13 @@
+# Respect extended word-boundaries
+set bind-tty-special-chars off
+Control-u: kill-whole-line
+Control-w: backward-kill-word
+
+# Enable Alt- <- -> for jumping by words
+"\e[1;5D": backward-word
+"\eOd": backward-word
+"\e[1;5C": forward-word
+"\eOc": forward-word
+
+# Then, from the shell:
+# bind -f ~/.inputrc
